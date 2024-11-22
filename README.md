@@ -64,29 +64,6 @@ A live demo can be added here if hosted:
 
 ---
 
-## 📂 File Structure
-blogproject/
-├── blogapp/                # Main app directory
-│   ├── migrations/         # Database migrations
-│   ├── templates/          # HTML templates
-│   ├── static/             # Static files (CSS, JS)
-│   ├── admin.py            # Admin site configuration
-│   ├── apps.py             # App configuration
-│   ├── forms.py            # Form definitions
-│   ├── models.py           # Database models
-│   ├── urls.py             # App URL configuration
-│   ├── views.py            # View logic
-│   └── ...
-├── blogapp/           # Project directory
-│   ├── settings.py         # Project settings
-│   ├── urls.py             # Project URL configuration
-│   └── ...
-├── db.sqlite3              # SQLite database file
-├── manage.py               # Django's command-line utility
-└── requirements.txt        # Python dependencies
-
----
-
 ## 🏗️ Installation
 
 ### Prerequisites
