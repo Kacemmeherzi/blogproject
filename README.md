@@ -28,16 +28,6 @@ A live demo will be hosted soon
 - **Database:** SQLite (default Django database)
 
 ---
-## 
-Certainly! Below is the updated README.md file with the steps included for better clarity:
-
-markdown
-Copier le code
-# Django Blog App
-
-A **Django-based Blog Application** that enables users to create, read, update, and delete blog posts. This project demonstrates the core features of the Django framework, including database models, templates, class-based views, and form handling.
-
----
 
 ## 🌟 Features
 
@@ -53,14 +43,6 @@ A **Django-based Blog Application** that enables users to create, read, update, 
 
 A live demo can be added here if hosted:
 - [Live Demo](https://example.com)
-
----
-
-## 🛠️ Technologies Used
-
-- **Framework:** Django 4.x
-- **Frontend:** HTML5, CSS3 (with Django's template system)
-- **Database:** SQLite (default Django database)
 
 ---
 
