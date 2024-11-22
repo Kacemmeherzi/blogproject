@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Blog Post</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f4f4f9;
+    }
+    h1 {
+        color: #333;
+    }
+    form {
+        max-width: 500px;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    form button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    form button:hover {
+        background-color: #45a049;
+    }
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #007BFF;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <h1>Create Blog Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Django génère automatiquement les champs du formulaire -->
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'blogapp:listhtml' %}">Back to Blog List</a>
+</body>
+</html>
