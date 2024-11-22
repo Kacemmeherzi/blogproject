@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog List</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #4caf50;
+      margin-bottom: 5px;
+    }
+    p {
+      margin: 5px 0;
+      color: #555;
+    }
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #007bff;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <h1>Blog Posts</h1>
+    <a href="{% url 'blogapp:createhtml' %}">create a blogpost</a>
+
+    <ul>
+      {% for post in posts %}
+      <li>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p><strong>Author:</strong> {{ post.author }}</p>
+        <p><strong>Created on:</strong> {{ post.created_on }}</p>
+        <a href="{% url 'blogapp:updatehtml' post.pk %}">Update</a>
+        <a href="{% url 'blogapp:deletehtml' post.pk %}">Delete</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
